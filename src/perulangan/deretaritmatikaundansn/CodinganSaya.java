@@ -15,26 +15,35 @@ public class CodinganSaya {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // ini nilai di suku pertama
-        int a = 14;
-        // ini beda atau selisihnya
-        int b = 4;
-        // ini suku ke berapa yang mau ditampilkan di awal
-        int sukupertama = 13;
-        //ini suku ke berapa yang mau ditampilkan di akhir
-        int sukuterakhir = 24;
-        // ini nilai yang ditampilkan di suku terawal
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("a                 : ");
+        int a = input.nextInt();
+        
+        System.out.print("b                 : ");
+        int b = input.nextInt();
+        
+        System.out.print("Suku ke-          : ");
+        int sukupertama = input.nextInt();
+        
+        System.out.print("sampai Suku ke-   : ");
+        int sukuterakhir = input.nextInt();
+        
         int nilaipertama = a+(b*(sukupertama-1));
-        // ini rumusnya
         int sukusaatini = nilaipertama;
         int jmlderet = nilaipertama;
-        System.out.println("Deret aritmatikanya yaitu:");
+        System.out.println("================================="+"\n"+
+                           "             Jawaban             "+"\n"+
+                           "=================================");
+        System.out.println("Deret aritmatikanya sbb:");
         for (int i=sukupertama; i<=sukuterakhir; i++){
-            System.out.println(sukusaatini);
+            System.out.println("Suku ke-"+i+" : "+sukusaatini);
             sukusaatini=sukusaatini+b;
             jmlderet=jmlderet+sukusaatini;
         }
         jmlderet=jmlderet-sukusaatini;
-        System.out.println("Jumlah deret aritmatikanya yaitu: "+jmlderet);
+        System.out.println("---------------------------------+");
+        System.out.println("Jumlah deret aritmatikanya (Sn) = "+jmlderet);
     }       
 }
