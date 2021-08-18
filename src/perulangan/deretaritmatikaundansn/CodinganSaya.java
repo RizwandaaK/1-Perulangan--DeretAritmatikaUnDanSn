@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package perulangan.deretaritmatikaundansn;
-
+import java.util.Scanner;
 /**
  *
  * @author rizwa
